@@ -31,6 +31,8 @@ of it. It is built by `lake build`, and fails the build if the invariant is brok
 
 The complementary syntactic checks -- that every `Definitions`/`Lemmas` module really is used by
 the statement, and that both umbrella modules are complete -- live in `scripts/check_import_layers.py`.
+Both work on the import graph; `scripts/StatementClosure.lean` reports the stronger property, namely
+which imported modules contribute no declaration to the `HodgeConjecture` term itself.
 -/
 
 open Lean

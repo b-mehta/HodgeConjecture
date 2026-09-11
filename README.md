@@ -35,4 +35,12 @@ statement. Two checks keep this honest:
   `Lemmas` and `Mathlib` really is used by the statement — plus that both umbrella modules are
   complete.
 
+Both checks work on the import graph, where a module counts as used as soon as something it imports
+is used. `lake env lean scripts/StatementClosure.lean` measures the stronger property: it walks the
+constant-dependency closure of the `HodgeConjecture` term and lists the imported modules that
+contribute no declaration to it. That list is the worklist for shrinking what a reader has to audit
+to check that the conjecture says what it should. It is a report rather than a check, because a
+module can contribute no constant and still be needed — one exporting only notation or `abbrev`s
+leaves no trace in the term.
+
 WIP formalisation guide: <https://paul-lez.github.io/HodgeConjecture/>.

@@ -17,16 +17,17 @@ module
 
 public import HodgeConjecture.Lemmas.AlgebraicGeometry.CycleComponentLocalGenerator
 
-import HodgeConjecture.Lemmas.AlgebraicGeometry.CycleComponentDimension
-import HodgeConjecture.Lemmas.AlgebraicGeometry.SmoothDimensionFormula
-import HodgeConjecture.Lemmas.AlgebraicGeometry.SmoothPointwiseDimension
 import HodgeConjecture.Lemmas.Algebra.PolynomialCatenary
+import HodgeConjecture.Lemmas.AlgebraicGeometry.CycleComponentDimension
 import HodgeConjecture.Lemmas.AlgebraicGeometry.CycleComponentNormalGeometry
 import HodgeConjecture.Lemmas.AlgebraicGeometry.SmoothCatenaryDimension
+import HodgeConjecture.Lemmas.AlgebraicGeometry.SmoothDimensionFormula
+import HodgeConjecture.Lemmas.AlgebraicGeometry.SmoothPointwiseDimension
 import Mathlib.RingTheory.IntegralClosure.GoingDown
 import Mathlib.RingTheory.KrullDimension.Field
 import Mathlib.RingTheory.KrullDimension.Polynomial
 import Mathlib.RingTheory.NoetherNormalization
+import Mathlib.RingTheory.Polynomial.RationalRoot
 
 /-!
 # Dimensions at closed points of cycle components
